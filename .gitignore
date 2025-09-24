@@ -1,0 +1,14 @@
+output/
+weight/
+*.pyc
+wandb/
+*.pth
+*.onnx
+visual/
+./SAM2/checkpoints
+./VideoDepthAnything/video_depth_anything_vits.pth
+*.mp4
+*.pt
+visual_out/
+mask/
+YOLOX_outputs/

@@ -1,0 +1,4 @@
+使用五维度的query直接进行预测，图片维度是1018 1918
+使用query坐标索引深度图的目标框内深度均值作为标签进行损失计算
+深度值数据加载时使用-1进行占位
+python img2video.py --img_dir ./track_vis --output ./pred_instance_depth.mp4 --fps 2
