@@ -6,8 +6,10 @@
 [![Torch Version](https://img.shields.io/badge/torch-2.7.1-red.svg)](https://pytorch.org/)
 [![DepTR-MOT Paper](https://img.shields.io/badge/DepTR--MOT-Paper-blue.svg)](https://arxiv.org/abs/2509.17323v1)
 
----
-DepTR-MOT is a depth-aware DETR-based multi-object tracker designed to improve robustness in robotic environments with dense targets and frequent occlusions. By leveraging instance-level depth cues through foundation-model-based soft depth supervision and dense depth distillation, DepTR-MOT refines trajectories without extra computation during inference. Experiments on QuadTrack and DanceTrack datasets demonstrate significant improvements, achieving HOTA scores of 27.59 and 44.47, respectively, and showing superior performance in occlusion and close-proximity scenarios.
+## 🔹 Overview
+
+
+- **DepTR-MOT** is a depth-aware DETR-based multi-object tracker designed to improve robustness in robotic environments with dense targets and frequent occlusions. By leveraging instance-level depth cues through foundation-model-based soft depth supervision and dense depth distillation, DepTR-MOT refines trajectories without extra computation during inference. Experiments on **QuadTrack** and **DanceTrack** datasets demonstrate significant improvements, achieving HOTA scores of 27.59 and 44.47, respectively, and showing superior performance in occlusion and close-proximity scenarios.
 ---
 ![DepTR-MOT tracking](./assert/quadtrack.png)
 ---
