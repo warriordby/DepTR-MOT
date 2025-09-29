@@ -7,9 +7,7 @@
 [![DepTR-MOT Paper](https://img.shields.io/badge/DepTR--MOT-Paper-blue.svg)](https://arxiv.org/abs/2509.17323v1)
 
 ## Demo
-<video controls>
- <source src="assert/video.mp4" type="video/mp4">
-</video>
+
 A demo video illustrating the tracking performance of our DepTR-MOT.
 
 
