@@ -6,25 +6,39 @@
 [![Torch Version](https://img.shields.io/badge/torch-2.7.1-red.svg)](https://pytorch.org/)
 [![DepTR-MOT Paper](https://img.shields.io/badge/DepTR--MOT-Paper-blue.svg)](https://arxiv.org/abs/2509.17323v1)
 
-## 🔹 Overview
+## Demo
+<video controls>
+ <source src="video.mp4" type="video/mp4">
+</video>
+A demo video illustrating the tracking performance of our DepTR-MOT.
 
 
-- **DepTR-MOT** is a depth-aware DETR-based multi-object tracker designed to improve robustness in robotic environments with dense targets and frequent occlusions. By leveraging instance-level depth cues through foundation-model-based soft depth supervision and dense depth distillation, DepTR-MOT refines trajectories without extra computation during inference. Experiments on **QuadTrack** and **DanceTrack** datasets demonstrate significant improvements, achieving HOTA scores of 27.59 and 44.47, respectively, and showing superior performance in occlusion and close-proximity scenarios.
+## Abstract
+
+We propose DepTR-MOT, a depth-aware DETR-based multi-object tracker that improves robustness in robotic environments with dense targets and frequent occlusions. By leveraging instance-level depth cues through foundation-model-based soft depth supervision and dense depth distillation, DepTR-MOT refines trajectories without extra computation during inference. Experiments on **QuadTrack** and **DanceTrack** datasets demonstrate significant improvements, achieving HOTA scores of 27.59 and 44.47, respectively, and showing superior performance in occlusion and close-proximity scenarios.
+
 ---
-![DepTR-MOT tracking](./assert/quadtrack.png)
----
-<!-- ![DepTR-MOT Pipeline](./assert/pipline.png)
---- -->
-## 📚 Reference
+
+![DepTR-MOT tracking](./assert/quadtrack.png) 
+*Real-world application of DepTR-MOT: deployed on a quadruped robot equipped with a panoramic camera, evaluating pedestrian tracking performance in sidewalk scenarios.*
+
+
+
+## Pipeline
+![DepTR-MOT Pipeline](./assert/pipline.png)
+*A prompt-based knowledge-guided foundation module leverages frozen SAM and Depth models to generate instance-level depth labels from 2D box annotations, providing label supervision and depth feature distillation to align the decoding-depth feature map during training. During inference, DepTR directly predicts 3D spatial locations using stacked object and depth-awareness blocks.*
+
+## Reference
 
 - [DFINE](https://github.com/Peterande/D-FINE)  
 - [SAM2](https://github.com/facebookresearch/sam2)  
 - [Video Depth Anything](https://github.com/DepthAnything/Video-Depth-Anything)  
 
----
 
-## 📖 Table of Contents
 
+
+
+## Installation
 - [1. Clone Repository](#1-clone-repository)  
 - [2. Set Up Environment](#2-set-up-environment)  
 - [3. Download Pretrained Models](#3-download-pretrained-models)  
@@ -33,18 +47,15 @@
 - [6. Testing](#6-testing)  
 - [7. Visualization](#7-visualization)  
 
----
 
-## 1. Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/warriordby/DepTR-MOT.git
 cd DepTR-MOT
 ````
 
----
-
-## 2. Set Up Environment
+### 2. Set Up Environment
 
 Create and activate a Conda environment:
 
@@ -53,9 +64,9 @@ conda env create -f environment.yml
 conda activate deptr
 ```
 
----
 
-## 3. Download Pretrained Models
+
+### 3. Download Pretrained Models
 
 ```bash
 # SAM2 checkpoint
@@ -67,9 +78,8 @@ wget https://hf-mirror.com/depth-anything/Video-Depth-Anything-Small/resolve/mai
   -O ./VideoDepthAnything/video_depth_anything_vits.pth
 ```
 
----
 
-## 4. Install SAM2
+### 4. Install SAM2
 
 ```bash
 cd SAM2
@@ -77,11 +87,7 @@ pip install -e .
 cd ..
 ```
 
----
-
-## 5. Training
-
-Train the model on multiple GPUs:
+### 5. Training
 
 ```bash
 # Example: 2 GPUs
@@ -89,11 +95,7 @@ CUDA_VISIBLE_DEVICES=0,1 torchrun --master_port=4444 --nproc_per_node=2 train.py
   -c configs/dfine/custom/dfine_hgnetv2_l_custom.yml --use-amp --seed=0
 ```
 
----
-
-## 6. Testing
-
-Single-GPU testing:
+### 6. Testing
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 torchrun --master_port=7777 --nproc_per_node=1 train.py \
@@ -101,9 +103,8 @@ CUDA_VISIBLE_DEVICES=0 torchrun --master_port=7777 --nproc_per_node=1 train.py \
   -r ./output/dfine_hgnetv2_l_custom/last.pth
 ```
 
----
 
-## 7. Visualization
+### 7. Visualization
 
 Visualize detection results:
 
@@ -113,12 +114,14 @@ CUDA_VISIBLE_DEVICES=0 torchrun --master_port=7777 --nproc_per_node=1 train.py \
   -r ./output/dfine_hgnetv2_l_custom/last.pth -v
 ```
 
-<!-- --- -->
-<!-- 
-## 8. TODO
+## Publication
 
-* [ ] Add multi-GPU testing instructions
-* [ ] Add example datasets and results
-* [ ] Include model evaluation metrics
-* [ ] Add detailed troubleshooting guide
-* [ ] Add GIF or screenshot examples in README -->
+If you find this work useful in your research, please cite our paper:
+
+```bibtex
+@article{DepTR-MOT2025,
+  title={DepTR-MOT: Depth-Aware DETR-Based Multi-Object Tracking for Robotic Environments},
+  author={XXX and XXX and XXX},
+  journal={arXiv preprint arXiv:2509.17323},
+  year={2025}
+}
