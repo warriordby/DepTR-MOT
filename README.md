@@ -8,7 +8,7 @@
 
 ## Demo
 <video controls>
- <source src="video.mp4" type="video/mp4">
+ <source src="assert/video.mp4" type="video/mp4">
 </video>
 A demo video illustrating the tracking performance of our DepTR-MOT.
 
