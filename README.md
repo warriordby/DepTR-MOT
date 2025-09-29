@@ -119,9 +119,12 @@ CUDA_VISIBLE_DEVICES=0 torchrun --master_port=7777 --nproc_per_node=1 train.py \
 If you find this work useful in your research, please cite our paper:
 
 ```bibtex
-@article{DepTR-MOT2025,
-  title={DepTR-MOT: Depth-Aware DETR-Based Multi-Object Tracking for Robotic Environments},
-  author={XXX and XXX and XXX},
-  journal={arXiv preprint arXiv:2509.17323},
-  year={2025}
+@misc{deng2025deptrmotunveilingpotentialdepthinformed,
+      title={DepTR-MOT: Unveiling the Potential of Depth-Informed Trajectory Refinement for Multi-Object Tracking}, 
+      author={Buyin Deng and Lingxin Huang and Kai Luo and Fei Teng and Kailun Yang},
+      year={2025},
+      eprint={2509.17323},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.17323}, 
 }
