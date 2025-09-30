@@ -9,7 +9,6 @@
 ## Demo
 
 
-https://github.com/user-attachments/assets/d0af53dd-6a5d-4640-b88a-5772bf94ca09
 
 
 A demo video illustrating the tracking performance of our DepTR-MOT.
