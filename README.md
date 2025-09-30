@@ -10,7 +10,6 @@
 
 
 
-
 A demo video illustrating the tracking performance of our DepTR-MOT.
 
 
