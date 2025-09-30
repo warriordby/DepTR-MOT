@@ -8,7 +8,9 @@
 
 ## Demo
 
-![damo1](https://github.com/user-attachments/assets/874cf338-f76c-4071-afcc-489198399d05)
+
+
+https://github.com/user-attachments/assets/36a610b1-b1ef-4a2a-9d48-ff53b2d71b90
 
 
 A demo video illustrating the tracking performance of our DepTR-MOT.
