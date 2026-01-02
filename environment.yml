@@ -1,4 +1,4 @@
-name: dfine
+name: deptr
 channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -96,7 +96,6 @@ dependencies:
       - regex==2024.11.6
       - requests==2.32.4
       - safetensors==0.5.3
-      - sam-2==1.0
       - scipy==1.16.0
       - setuptools==80.9.0
       - six==1.17.0
