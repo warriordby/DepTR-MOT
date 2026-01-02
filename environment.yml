@@ -118,4 +118,4 @@ dependencies:
       - wcwidth==0.2.13
       - werkzeug==3.1.3
       - xformers==0.0.31.post1
-prefix: /root/miniconda3/envs/dfine
+prefix: /root/miniconda3/envs/deptr
